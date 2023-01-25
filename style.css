@@ -9,6 +9,7 @@
 
 body {
     background-color: rgb(40,44,51);
+    box-sizing: border-box;
 }
 
 
@@ -30,7 +31,7 @@ body {
 .hug {
     width: 25px;
     position: absolute;
-    z-index: -99;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,6 +50,7 @@ body {
     margin-bottom: 15px;
     margin-left: 25px;
     color: #ABB2BF;
+    transition: all linear 500ms;
 }
 
 .left {
@@ -86,11 +88,104 @@ body {
     color: #ABB2BF;
     font-family: 'Fira Code', monospace;
     font-size: 15px;
+    transition: all 200ms linear;
 }
 
 .active {
     color: white;
 }
+
+.item_logo:hover {
+    color: white;
+    filter: drop-shadow(1px 1px 2px white);
+}
+
+.header .right ul li a:hover {
+    color:white;
+}
+
+.first_left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.first_right {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.first {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+.purple {
+    color: #C778DD;
+}
+
+.first_title {
+    color: white;
+    font-family: 'Fira Code', monospace;
+    flex-wrap: wrap;
+    max-width: 500px;
+    font-size: 18px;
+    margin-top: 2vh;
+}
+
+.first_subtitle {
+    margin-top: 20px;
+    color:#ABB2BF;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+}
+
+.first_button {
+    margin-top: 15px;
+    background-color: transparent;
+    border: 1px solid #C778DD;
+    width: 148px;
+    height: 37px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    transition: all linear 500ms;
+}
+
+.buttonimage {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ABB2BF;
+    padding: 5px;
+}
+
+.rectangle {
+    background-color: #C778DD;
+    width: 16px;
+    height: 16px;
+}
+
+.buttonimage_text {
+    color: white;
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    padding-left: 8px;
+}
+
+.first_button:hover {
+    filter: drop-shadow(1px 1px 2px #C778DD);
+    cursor: pointer;
+}
+
 
 @media only screen and (max-width:480px) {
     .header {
@@ -131,5 +226,39 @@ body {
         color: #ABB2BF;
         font-family: 'Fira Code', monospace;
         font-size: 13px;
+    }
+
+    .first {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .first_title {
+        color: white;
+        font-family: 'Fira Code', monospace;
+        flex-wrap: wrap;
+        max-width: 300px;
+        font-size: 16px;
+    }
+
+    .first_right img {
+        width: 250px;
+    }
+
+    .first_left {
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .first_subtitle {
+        margin-top: 20px;
+        color:#ABB2BF;
+        font-family: 'Fira Code', monospace;
+        font-size: 14px;
+        max-width: 300px;
+        margin-bottom: 15px;
     }
 }
